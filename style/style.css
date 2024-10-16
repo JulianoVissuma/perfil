@@ -1,0 +1,148 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/*---------Variaveis--------------*/
+:root{
+    --dark-text:#ffffff;
+    --bg-dark: url('../img/bg-mobile.jpg') no-repeat fixed;
+    --men-dark: rgba(255, 255, 255, 0.573);
+    --men-li:#3c3c3c18;
+    --men-hover:#ffffff18;
+    --link-hover:#ffffff1a;
+    --mode-tr:url(../icon/night.svg);
+
+}
+.light{
+    --bg-dark: url('../img/bg-mobile-light.jpg') no-repeat fixed;
+    --dark-text: #000000;
+    --men-dark: rgba(0, 0, 0, 50%);
+    --men-li: rgba(0, 0, 0, 5%);
+    --men-hover: rgba(255, 255, 255, 2%);
+    --link-hover:#0000001a;
+    --mode-tr:url(../icon/sol.svg);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+html{
+    background: var(--bg-dark);
+    background-size: cover;
+    color: var(--dark-text);
+}
+
+/*------------------Cabeçalho----------------------*/
+div#cont{
+    width: 80%;
+    margin: auto;
+    padding: 24px 0px;
+
+    
+}
+div#cont > img{
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+}
+div#cont > p{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*--------------Trocar de Modo-----------------*/
+
+.trocar{
+    position: relative;
+    width: 62px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+.trocar > button{
+    position: absolute;
+    background: #ffffff var(--mode-tr) no-repeat center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.light .trocar button{
+    right: 0;
+    left: initial;
+}
+
+.trocar span{
+    display: block;
+    width: 62px;
+    height: 24px;
+    border-radius: 9999px;
+    background-color: var(--men-li);
+    border: 1px solid white;
+}
+
+
+/*-----------------Meu menu------------------------*/
+#men{
+    width:80vw;
+    padding: 24px 0px;
+}
+
+#men li{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+
+    background-color: var(--men-hover);
+    padding: 16px 24px;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    border: 1px solid var(--men-dark);
+}
+#men li:hover{
+    background-color: var(--men-li);
+    border: 1px solid var(--dark-text);
+}
+
+/*-----------icons----------*/
+.link{
+    display: flex;
+    justify-content: center;
+    padding: 24px 0px;
+}
+.link a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    border-radius: 50%;
+    padding: 16px;
+    transition: background .2s;
+}
+.link a:hover{
+    background-color: var(--link-hover);
+    
+}
+/*-----------Rodape-----------------*/
+
+hr{
+    width: 180px;
+    margin: auto;
+}
+footer{
+    text-align: center;
+    padding: 24px;
+}
+
+
+
